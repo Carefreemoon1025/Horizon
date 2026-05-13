@@ -15,15 +15,21 @@ logger = logging.getLogger(__name__)
 
 REDDIT_BASE = "https://www.reddit.com"
 USER_AGENT = (
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "
     "Chrome/135.0.0.0 Safari/537.36"
 )
 REDDIT_HEADERS = {
     "User-Agent": USER_AGENT,
-    "Accept": "application/json,text/plain,*/*",
+    "Accept": "application/json, text/plain, */*",
     "Accept-Language": "en-US,en;q=0.9",
-    "Referer": f"{REDDIT_BASE}/",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Referer": "https://www.reddit.com/",
+    "Origin": "https://www.reddit.com",
+    "DNT": "1",
+    "Sec-Fetch-Dest": "empty",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Site": "same-origin",
 }
 MAX_COMMENT_CONCURRENCY = 2
 
